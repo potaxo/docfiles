@@ -79,28 +79,35 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-" Make the cursor behaves default
-set guicursor=
-
 set termguicolors
-colorscheme elflord
+colorscheme elflord    " Base theme, we'll override colors
 
-" --- Custom Highlight Overrides ---
-" Variant: White + Light Green + Soft Purple + Accents (more green!)
+" --- VS Code Inspired Overrides ---
 
-highlight Comment     guifg=#87CEFA gui=italic       " light blue
-highlight Keyword     guifg=#ADFF2F gui=bold         " GreenYellow keywords
-highlight String      guifg=#98FB98                  " PaleGreen strings
-highlight Function    guifg=#FFFFFF gui=bold         " White functions
-highlight Identifier  guifg=#E0FFFF                  " LightCyan identifiers
-highlight Type        guifg=#FFA07A gui=bold         " Orchid types
-highlight Constant    guifg=#FFFACD                  " LemonChiffon (soft yellow)
+" Comments: muted gray
+highlight Comment     guifg=#6A9955 gui=italic
 
-" --- Extra Tweaks for <> tags, operators, etc. ---
-highlight Special     guifg=#90EE90 gui=bold         " LightGreen for <tags> etc.
-highlight Delimiter   guifg=#7FFFD4                  " Aquamarine for symbols
-highlight Operator    guifg=#ADFF2F gui=bold         " GreenYellow operators (+ - =)
-highlight Statement   guifg=#32CD32 gui=bold         " LimeGreen for if/for/while
-highlight PreProc     guifg=#00FA9A                  " MediumSpringGreen for macros
+" Keywords: purple
+highlight Keyword     guifg=#C586C0 gui=bold
 
+" Strings: green
+highlight String      guifg=#CE9178
+
+" Functions: cyan/light blue
+highlight Function    guifg=#4FC1FF gui=bold
+
+" Identifiers/variables: white
+highlight Identifier  guifg=#D4D4D4
+
+" Constants/numbers: orange
+highlight Constant    guifg=#D19A66
+
+" Types/classes: light yellow
+highlight Type        guifg=#E5C07B gui=bold
+
+" Specials (tags, etc.)
+highlight Special     guifg=#569CD6
+
+highlight LineNr guifg=#858585 guibg=NONE
+highlight CursorLineNr guifg=#FFFFFF gui=bold guibg=NONE
 
