@@ -120,3 +120,5 @@ fi
 
 LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
